@@ -4,7 +4,7 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [603711.065514, 9129095.421057, 625681.829249, 9142022.039966], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+        extent: [603711.065514, 9129095.421057, 625681.829249, 9142022.039966], maxZoom: 28, minZoom: 2, projection: new ol.proj.Projection({
             code: 'EPSG:32749',
             //extent: [605272.070500, 9129232.074400, 619332.363900, 9140853.681800],
             units: 'm'})
@@ -1102,6 +1102,12 @@ let measuring = false;
 
 //layerswitcher
 
+var layerSwitcher = new ol.control.LayerSwitcher({
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
+map.addControl(layerSwitcher);
+    
 
 
 
